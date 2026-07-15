@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our beautiful website</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>👥 User Directory</h1>
+
+    <div class="toolbar">
+
+        <div class="search-box">
+            <input
+                id="ageInput"
+                type="number"
+                placeholder="Maximum age..."
+            >
+            <button id="searchBtn">
+                Search
+            </button>
+
+            <button id="resetBtn">
+                Reset
+            </button>
+        </div>
+
+        <button id="newUserBtn">
+            + Add User
+        </button>
+
+    </div>
+
+    <div id="userList" class="user-list">
+
+    </div>
+
+</div>
+
+<!-- User Details -->
+
+<div id="userModal" class="modal hidden">
+
+    <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <img src="/static/avatar.svg" class="modal-avatar">
+
+        <h2 id="modalName"></h2>
+
+        <p><strong>Age:</strong> <span id="modalAge"></span></p>
+
+        <p><strong>Address:</strong> <span id="modalAddress"></span></p>
+
+        <p><strong>Hobbies:</strong></p>
+
+        <ul id="modalHobbies"></ul>
+
+    </div>
+
+</div>
+
+<!-- Add User -->
+
+<div id="addModal" class="modal hidden">
+
+    <div class="modal-content">
+
+        <span class="closeAdd">&times;</span>
+
+        <h2>Add User</h2>
+
+        <input id="name" placeholder="Name">
+
+        <input id="age" type="number" placeholder="Age">
+
+        <input id="address" placeholder="Address">
+
+        <input
+            id="hobbies"
+            placeholder="Hobbies (comma separated)"
+        >
+
+        <button id="saveUser">
+            Save
+        </button>
+
+    </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
